@@ -11,10 +11,9 @@ export default function SignatureDisplay(): JSX.Element {
             return res.json();
           })
           .then((signatures) => {
-            console.log(signatures.data.signatures.rows);
             setSignatures(signatures.data.signatures.rows);
           }, (error) => console.log(error))
-          .catch((error) => console.log(error));}, [])
+          .catch((error) => console.log(error));})
     return (
         <>
             <h1>This is the Signature Display</h1>
